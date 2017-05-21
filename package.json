@@ -1,0 +1,14 @@
+{
+  "name": "readability-api",
+  "version": "0.0.1",
+  "description": "Mozilla Readability REST API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Florent Viel <luxifer666@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "readability": "https://github.com/mozilla/readability/archive/master.tar.gz"
+  }
+}
