@@ -1,4 +1,4 @@
-const http = require('http');
+const http = require('follow-redirects').http;
 const url = require('url');
 const { Readability, JSDOMParser } = require('readability/index');
 const contentType = require('content-type');
