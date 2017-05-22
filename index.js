@@ -54,4 +54,5 @@ function getUrl(url) {
     });
 }
 
-server.listen(4567);
+const port = process.env.PORT ? process.env.PORT : 4567;
+server.listen(port);
