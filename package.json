@@ -4,7 +4,7 @@
   "description": "Mozilla Readability REST API",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "Florent Viel <luxifer666@gmail.com>",
   "license": "MIT",
@@ -16,6 +16,7 @@
     "content-type": "^1.0.2",
     "follow-redirects": "^1.2.3",
     "jsdom": "^11.0.0",
-    "readability": "https://github.com/mozilla/readability/archive/master.tar.gz"
+    "readability": "https://github.com/mozilla/readability/archive/master.tar.gz",
+    "request": "^2.83.0"
   }
 }
