@@ -1,0 +1,22 @@
+service: readability
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev # Set the default stage used. Default is dev
+  region: eu-west-1 # Overwrite the default region used. Default is us-east-1
+  profile: serverless # The default profile to use with this service
+  memorySize: 512 # Overwrite the default memory size. Default is 1024
+  versionFunctions: false # Optional function versioning
+
+functions:
+  urlToArticle: # A Function
+    handler: handler.urlToArticle
+    events:
+      - http:
+          path: readability
+          method: get
+          request:
+            parameters:
+              querystrings:
+                url: true
