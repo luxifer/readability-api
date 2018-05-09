@@ -1,7 +1,7 @@
 const contentType = require('content-type');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-const { Readability } = require('readability/index');
+const Readability = require('readability');
 const request = require('request');
 const url = require('url');
 
