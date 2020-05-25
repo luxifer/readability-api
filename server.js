@@ -1,17 +1,20 @@
-const http = require('http');
-const url = require('url');
-const { getUrl, getArticle } = require('./redability.js');
+import { createServer } from 'http';
+import { parse } from 'url';
+import { getArticle } from './modules/redability.mjs';
+import fetch from 'node-fetch';
 
-const server = http.createServer((req, res) => {
-    const query = url.parse(req.url, true).query;
+const server = createServer((req, res) => {
+    const query = parse(req.url, true).query;
 
     if (typeof query.url === 'undefined') {
         res.statusCode = 400;
         res.statusMessage = 'Bad request';
         res.end();
+        return
     }
 
-    getUrl(query.url)
+    fetch(query.url)
+        .then(res => res.text())
         .then((content) => {
             const article = getArticle(content, query.url)
             res.setHeader('Content-Type', 'application/json');

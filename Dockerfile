@@ -1,2 +1,2 @@
-FROM node:7-onbuild
+FROM node:14
 EXPOSE 4567

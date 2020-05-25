@@ -1,10 +1,12 @@
 'use strict';
 
-const { getUrl, getArticle } = require('./redability.js');
+import { getArticle } from './modules/redability.mjs';
+import fetch from 'node-fetch';
 
-module.exports.urlToArticle = function (event, context, callback) {
+export function urlToArticle (event, context, callback) {
     const url = event.queryStringParameters.url;
-    getUrl(url)
+    fetch(query.url)
+        .then(res => res.text())
         .then((content) => {
             const article = getArticle(content, url);
             callback(null, {
