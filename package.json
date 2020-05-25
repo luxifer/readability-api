@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "content-type": "^1.0.2",
-    "jsdom": "^11.10.0",
+    "jsdom": "^11.12.0",
     "readability": "https://github.com/mozilla/readability/archive/master.tar.gz",
-    "request": "^2.85.0"
+    "request": "^2.88.2"
   }
 }
