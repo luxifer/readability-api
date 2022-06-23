@@ -14,9 +14,9 @@
     "url": "https://github.com/luxifer/readability-api.git"
   },
   "dependencies": {
+    "@mozilla/readability": "^0.4.2",
     "content-type": "^1.0.2",
     "jsdom": "^11.12.0",
-    "node-fetch": "^2.6.0",
-    "readability": "https://github.com/mozilla/readability/archive/master.tar.gz"
+    "node-fetch": "^2.6.0"
   }
 }
